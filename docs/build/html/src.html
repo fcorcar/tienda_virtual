@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="python" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>src package &#8212; tienda_virtual  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=d048f138"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-src.cliente">
+<span id="src-cliente-module"></span><h2>src.cliente module<a class="headerlink" href="#module-src.cliente" title="Link to this heading">¶</a></h2>
+<section id="cliente-py">
+<h3>cliente.py<a class="headerlink" href="#cliente-py" title="Link to this heading">¶</a></h3>
+<p>Este módulo define la clase <cite>Cliente</cite>, que representa a un cliente del sistema.</p>
+<p>La clase encapsula información básica del cliente como su identificador, nombre,
+correo electrónico y dirección.</p>
+<section id="clases">
+<h4>Clases:<a class="headerlink" href="#clases" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Cliente: Representa un cliente con información personal básica.</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-uso">
+<h4>Ejemplo de uso:<a class="headerlink" href="#ejemplo-de-uso" title="Link to this heading">¶</a></h4>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Cliente</span><span class="p">(</span><span class="s2">&quot;C001&quot;</span><span class="p">,</span> <span class="s2">&quot;Ana García&quot;</span><span class="p">,</span> <span class="s2">&quot;ana@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;Calle Falsa 123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="go"> - ID: C001  -  Nombre: Ana García  -  Email: ana@gmail.com  -  Dirección: Calle Falsa 123</span>
+</pre></div>
+</div>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.cliente.Cliente">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.cliente.</span></span><span class="sig-name descname"><span class="pre">Cliente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direccion_cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cliente.html#Cliente"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cliente.Cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que representa a un cliente del sistema.</p>
+<section id="atributos">
+<h3>Atributos:<a class="headerlink" href="#atributos" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>id_cliente<span class="classifier">str</span></dt><dd><p>Identificador único del cliente.</p>
+</dd>
+<dt>nombre_cliente<span class="classifier">str</span></dt><dd><p>Nombre completo del cliente.</p>
+</dd>
+<dt>email_cliente<span class="classifier">str</span></dt><dd><p>Dirección de correo electrónico del cliente.</p>
+</dd>
+<dt>direccion_cliente<span class="classifier">str</span></dt><dd><p>Dirección física del cliente.</p>
+</dd>
+</dl>
+</section>
+<section id="metodos">
+<h3>Métodos:<a class="headerlink" href="#metodos" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>__str__():</dt><dd><p>Devuelve una representación en cadena del cliente.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="src.cliente.Cliente.direccion_cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direccion_cliente</span></span><a class="headerlink" href="#src.cliente.Cliente.direccion_cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece la dirección del cliente.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.cliente.Cliente.email_cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">email_cliente</span></span><a class="headerlink" href="#src.cliente.Cliente.email_cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el email del cliente.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.cliente.Cliente.id_cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_cliente</span></span><a class="headerlink" href="#src.cliente.Cliente.id_cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el ID del cliente.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.cliente.Cliente.nombre_cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nombre_cliente</span></span><a class="headerlink" href="#src.cliente.Cliente.nombre_cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el nombre del cliente.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="src-funciones-menu-module">
+<h2>src.funciones_menu module<a class="headerlink" href="#src-funciones-menu-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="src-main-module">
+<h2>src.main module<a class="headerlink" href="#src-main-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="src-menu-module">
+<h2>src.menu module<a class="headerlink" href="#src-menu-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-src.pedido">
+<span id="src-pedido-module"></span><h2>src.pedido module<a class="headerlink" href="#module-src.pedido" title="Link to this heading">¶</a></h2>
+<section id="pedido-py">
+<h3>pedido.py<a class="headerlink" href="#pedido-py" title="Link to this heading">¶</a></h3>
+<p>Este módulo define la clase <cite>Pedido</cite>, que representa una transacción de compra realizada por un cliente.</p>
+<p>La clase gestiona información como el cliente asociado, los productos añadidos al pedido,
+la fecha de creación y el cálculo del total del pedido.</p>
+<section id="id1">
+<h4>Clases:<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Pedido: Representa un pedido realizado por un cliente.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h4>Ejemplo de uso:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cliente</span> <span class="o">=</span> <span class="n">Cliente</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="s2">&quot;Juan Pérez&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pedido</span> <span class="o">=</span> <span class="n">Pedido</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">cliente</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pedido</span><span class="o">.</span><span class="n">agregar_productos</span><span class="p">(</span><span class="n">producto1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">pedido</span><span class="o">.</span><span class="n">calcular_total</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.pedido.Pedido">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.pedido.</span></span><span class="sig-name descname"><span class="pre">Pedido</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cliente</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/pedido.html#Pedido"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.pedido.Pedido" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que representa un pedido realizado por un cliente en la tienda.</p>
+<section id="id3">
+<h3>Atributos:<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>id_cliente<span class="classifier">str</span></dt><dd><p>Identificador del cliente que realizó el pedido.</p>
+</dd>
+<dt>cliente<span class="classifier">object</span></dt><dd><p>Objeto que representa al cliente.</p>
+</dd>
+<dt>productos<span class="classifier">list</span></dt><dd><p>Lista de objetos producto añadidos al pedido.</p>
+</dd>
+<dt>fecha<span class="classifier">str</span></dt><dd><p>Fecha en que se realiza el pedido (formato &quot;dd/mm/yyyy&quot;).</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Métodos:<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>agregar_productos(producto: object):</dt><dd><p>Añade un producto al pedido.</p>
+</dd>
+<dt>calcular_total() -&gt; float:</dt><dd><p>Calcula el total del pedido sumando los precios de los productos.</p>
+</dd>
+<dt>__str__() -&gt; str:</dt><dd><p>Devuelve una representación en cadena del pedido.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.pedido.Pedido.agregar_productos">
+<span class="sig-name descname"><span class="pre">agregar_productos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">producto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/pedido.html#Pedido.agregar_productos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.pedido.Pedido.agregar_productos" title="Link to this definition">¶</a></dt>
+<dd><p>Añade un producto al pedido.</p>
+<section id="parametros">
+<h4>Parámetros:<a class="headerlink" href="#parametros" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>producto<span class="classifier">object</span></dt><dd><p>El producto a añadir a la lista del pedido.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.pedido.Pedido.calcular_total">
+<span class="sig-name descname"><span class="pre">calcular_total</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/pedido.html#Pedido.calcular_total"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.pedido.Pedido.calcular_total" title="Link to this definition">¶</a></dt>
+<dd><p>Calcula el total del pedido sumando los precios de los productos.</p>
+<section id="retorna">
+<h4>Retorna:<a class="headerlink" href="#retorna" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>float:</dt><dd><p>El total del pedido.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.pedido.Pedido.cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cliente</span></span><a class="headerlink" href="#src.pedido.Pedido.cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve el objeto cliente.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.pedido.Pedido.fecha">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fecha</span></span><a class="headerlink" href="#src.pedido.Pedido.fecha" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve la fecha del pedido.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.pedido.Pedido.id_cliente">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_cliente</span></span><a class="headerlink" href="#src.pedido.Pedido.id_cliente" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve el ID del cliente.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.pedido.Pedido.productos">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">productos</span></span><a class="headerlink" href="#src.pedido.Pedido.productos" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve la lista de productos del pedido.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-src.producto">
+<span id="src-producto-module"></span><h2>src.producto module<a class="headerlink" href="#module-src.producto" title="Link to this heading">¶</a></h2>
+<section id="producto-py">
+<h3>producto.py<a class="headerlink" href="#producto-py" title="Link to this heading">¶</a></h3>
+<p>Este módulo define la clase <cite>Producto</cite>, que representa un artículo físico disponible para la venta.
+Incluye propiedades como identificador, nombre, precio y stock disponible, y permite actualizar el inventario.</p>
+<section id="id5">
+<h4>Clases:<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Producto: Representa un producto físico estándar.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h4>Ejemplo de uso:<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Producto</span><span class="p">(</span><span class="s2">&quot;P001&quot;</span><span class="p">,</span> <span class="s2">&quot;Camiseta&quot;</span><span class="p">,</span> <span class="mf">19.99</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="go"> ~ ID: P001  -  Nombre: Camiseta  -  Precio: 19.99€  -  Stock: 100</span>
+</pre></div>
+</div>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.producto.Producto">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.producto.</span></span><span class="sig-name descname"><span class="pre">Producto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_producto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_producto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precio_producto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock_producto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/producto.html#Producto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.producto.Producto" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que representa un producto físico con identificador, nombre, precio y stock.</p>
+<section id="id7">
+<h3>Parámetros:<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>id_producto<span class="classifier">str</span></dt><dd><p>Identificador único del producto.</p>
+</dd>
+<dt>nombre_producto<span class="classifier">str</span></dt><dd><p>Nombre del producto.</p>
+</dd>
+<dt>precio_producto<span class="classifier">float</span></dt><dd><p>Precio del producto en euros.</p>
+</dd>
+<dt>stock_producto<span class="classifier">int</span></dt><dd><p>Cantidad disponible en inventario.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Métodos:<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>actualizar_stock(cantidad: int) -&gt; str:</dt><dd><p>Actualiza el stock sumando o restando unidades.</p>
+</dd>
+<dt>__str__() -&gt; str:</dt><dd><p>Devuelve una representación legible del producto.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.producto.Producto.actualizar_stock">
+<span class="sig-name descname"><span class="pre">actualizar_stock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cantidad</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/producto.html#Producto.actualizar_stock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.producto.Producto.actualizar_stock" title="Link to this definition">¶</a></dt>
+<dd><p>Actualiza el stock del producto sumando o restando una cantidad.</p>
+<section id="id9">
+<h4>Parámetros:<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>cantidad<span class="classifier">int</span></dt><dd><p>Cantidad a modificar en el inventario. Puede ser negativa.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h4>Retorna:<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>str:</dt><dd><p>Mensaje indicando si el stock fue actualizado correctamente o si hubo un error.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.producto.Producto.id_producto">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_producto</span></span><a class="headerlink" href="#src.producto.Producto.id_producto" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el ID del producto.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.producto.Producto.nombre_producto">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nombre_producto</span></span><a class="headerlink" href="#src.producto.Producto.nombre_producto" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el nombre del producto.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.producto.Producto.precio_producto">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precio_producto</span></span><a class="headerlink" href="#src.producto.Producto.precio_producto" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el precio del producto.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.producto.Producto.stock_producto">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stock_producto</span></span><a class="headerlink" href="#src.producto.Producto.stock_producto" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene o establece el stock del producto.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="src-producto-digital-module">
+<h2>src.producto_digital module<a class="headerlink" href="#src-producto-digital-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="src-resena-module">
+<h2>src.resena module<a class="headerlink" href="#src-resena-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-src.sistema">
+<span id="src-sistema-module"></span><h2>src.sistema module<a class="headerlink" href="#module-src.sistema" title="Link to this heading">¶</a></h2>
+<section id="sistema-py">
+<h3>sistema.py<a class="headerlink" href="#sistema-py" title="Link to this heading">¶</a></h3>
+<p>Este módulo proporciona funciones utilitarias para la gestión del sistema de consola e interacción con el usuario.</p>
+<section id="funciones-incluidas">
+<h4>Funciones incluidas:<a class="headerlink" href="#funciones-incluidas" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>pause(valor)</p></li>
+<li><p>limpiar_consola()</p></li>
+<li><p>terminar_programa()</p></li>
+<li><p>entrada_cadena(nombre)</p></li>
+<li><p>entrada_numerica(nombre, tipo)</p></li>
+<li><p>obtener_id(f_id, listado)</p></li>
+</ul>
+</section>
+<section id="variables-globales">
+<h4>Variables globales:<a class="headerlink" href="#variables-globales" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><dl class="simple">
+<dt>en_ejecucion<span class="classifier">bool</span></dt><dd><p>Indica si el sistema debe continuar en ejecución.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id11">
+<h4>Ejemplo de uso:<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="n">entrada_cadena</span><span class="p">(</span><span class="s2">&quot;Nombre del producto&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cantidad</span> <span class="o">=</span> <span class="n">entrada_numerica</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">,</span> <span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pause</span><span class="p">(</span><span class="s2">&quot;continuar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<dl class="py data">
+<dt class="sig sig-object py" id="src.sistema.en_ejecucion">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">en_ejecucion</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#src.sistema.en_ejecucion" title="Link to this definition">¶</a></dt>
+<dd><p>Variable de control que indica si el programa sigue en ejecución.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.entrada_cadena">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">entrada_cadena</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nombre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/src/sistema.html#entrada_cadena"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.entrada_cadena" title="Link to this definition">¶</a></dt>
+<dd><p>Solicita al usuario una cadena de texto no vacía.</p>
+<section id="id12">
+<h3>Parámetros:<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>nombre<span class="classifier">str</span></dt><dd><p>Nombre del campo a solicitar (se usará como etiqueta).</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h3>Retorna:<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>str:</dt><dd><p>Cadena introducida por el usuario en mayúsculas.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.entrada_numerica">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">entrada_numerica</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nombre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/src/sistema.html#entrada_numerica"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.entrada_numerica" title="Link to this definition">¶</a></dt>
+<dd><p>Solicita al usuario un valor numérico (entero o flotante).</p>
+<section id="id14">
+<h3>Parámetros:<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>nombre<span class="classifier">str</span></dt><dd><p>Etiqueta del campo.</p>
+</dd>
+<dt>tipo<span class="classifier">str</span></dt><dd><p>Tipo de número esperado: &quot;int&quot; o &quot;float&quot;.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h3>Retorna:<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>int | float:</dt><dd><p>Número ingresado por el usuario, según el tipo especificado.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.limpiar_consola">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">limpiar_consola</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/sistema.html#limpiar_consola"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.limpiar_consola" title="Link to this definition">¶</a></dt>
+<dd><p>Limpia la consola del sistema operativo.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.obtener_id">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">obtener_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listado</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/src/sistema.html#obtener_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.obtener_id" title="Link to this definition">¶</a></dt>
+<dd><p>Genera un nuevo ID basado en el último ID registrado de una lista o diccionario.</p>
+<section id="id16">
+<h3>Parámetros:<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>f_id<span class="classifier">str</span></dt><dd><p>Prefijo del ID (por ejemplo, &quot;P&quot; para productos, &quot;C&quot; para clientes).</p>
+</dd>
+<dt>listado<span class="classifier">list | dict</span></dt><dd><p>Colección actual de objetos o claves con IDs.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h3>Retorna:<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>str:</dt><dd><p>Nuevo ID generado con formato <cite>{f_id}XXXX</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.pause">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">valor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/sistema.html#pause"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.pause" title="Link to this definition">¶</a></dt>
+<dd><p>Pausa la ejecución del programa hasta que el usuario pulse ENTER.</p>
+<section id="id18">
+<h3>Parámetros:<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>valor<span class="classifier">str</span></dt><dd><p>Texto a mostrar indicando la acción a realizar tras la pausa.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.sistema.terminar_programa">
+<span class="sig-prename descclassname"><span class="pre">src.sistema.</span></span><span class="sig-name descname"><span class="pre">terminar_programa</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/sistema.html#terminar_programa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.sistema.terminar_programa" title="Link to this definition">¶</a></dt>
+<dd><p>Limpia la consola y finaliza la ejecución del programa
+cambiando el valor de <cite>en_ejecucion</cite> a False.</p>
+</dd></dl>
+
+</section>
+<section id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">tienda_virtual</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">src package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">src</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Francisco Cortes.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/src.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

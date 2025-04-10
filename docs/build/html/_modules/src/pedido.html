@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="python" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>src.pedido &#8212; tienda_virtual  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=d048f138"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for src.pedido</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">pedido.py</span>
+<span class="sd">=========</span>
+
+<span class="sd">Este módulo define la clase `Pedido`, que representa una transacción de compra realizada por un cliente.</span>
+
+<span class="sd">La clase gestiona información como el cliente asociado, los productos añadidos al pedido,</span>
+<span class="sd">la fecha de creación y el cálculo del total del pedido.</span>
+
+<span class="sd">Clases:</span>
+<span class="sd">-------</span>
+<span class="sd">- Pedido: Representa un pedido realizado por un cliente.</span>
+
+<span class="sd">Ejemplo de uso:</span>
+<span class="sd">---------------</span>
+<span class="sd">&gt;&gt;&gt; cliente = Cliente(&quot;123&quot;, &quot;Juan Pérez&quot;)</span>
+<span class="sd">&gt;&gt;&gt; pedido = Pedido(&quot;123&quot;, cliente)</span>
+<span class="sd">&gt;&gt;&gt; pedido.agregar_productos(producto1)</span>
+<span class="sd">&gt;&gt;&gt; print(pedido.calcular_total())</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Pedido">
+<a class="viewcode-back" href="../../src.html#src.pedido.Pedido">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Pedido</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase que representa un pedido realizado por un cliente en la tienda.</span>
+
+<span class="sd">    Atributos:</span>
+<span class="sd">    ----------</span>
+<span class="sd">    id_cliente : str</span>
+<span class="sd">        Identificador del cliente que realizó el pedido.</span>
+<span class="sd">    cliente : object</span>
+<span class="sd">        Objeto que representa al cliente.</span>
+<span class="sd">    productos : list</span>
+<span class="sd">        Lista de objetos producto añadidos al pedido.</span>
+<span class="sd">    fecha : str</span>
+<span class="sd">        Fecha en que se realiza el pedido (formato &quot;dd/mm/yyyy&quot;).</span>
+
+<span class="sd">    Métodos:</span>
+<span class="sd">    --------</span>
+<span class="sd">    agregar_productos(producto: object):</span>
+<span class="sd">        Añade un producto al pedido.</span>
+
+<span class="sd">    calcular_total() -&gt; float:</span>
+<span class="sd">        Calcula el total del pedido sumando los precios de los productos.</span>
+
+<span class="sd">    __str__() -&gt; str:</span>
+<span class="sd">        Devuelve una representación en cadena del pedido.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_cliente</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cliente</span><span class="p">:</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Inicializa un nuevo pedido con un cliente y una fecha por defecto.</span>
+
+<span class="sd">        Parámetros:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        id_cliente : str</span>
+<span class="sd">            Identificador del cliente.</span>
+<span class="sd">        cliente : object</span>
+<span class="sd">            Objeto que representa al cliente.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span> <span class="o">=</span> <span class="n">id_cliente</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cliente</span> <span class="o">=</span> <span class="n">cliente</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__productos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__fecha</span> <span class="o">=</span> <span class="s2">&quot;10/10/2025&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id_cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Devuelve el ID del cliente.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span>
+
+    <span class="nd">@id_cliente</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id_cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Establece el ID del cliente.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span> <span class="o">=</span> <span class="n">valor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Devuelve el objeto cliente.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cliente</span>
+
+    <span class="nd">@cliente</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Establece el objeto cliente.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cliente</span> <span class="o">=</span> <span class="n">valor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">productos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Devuelve la lista de productos del pedido.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__productos</span>
+
+    <span class="nd">@productos</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">productos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Establece la lista de productos del pedido.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__productos</span> <span class="o">=</span> <span class="n">valor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fecha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Devuelve la fecha del pedido.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fecha</span>
+
+    <span class="nd">@fecha</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fecha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Establece la fecha del pedido.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__fecha</span> <span class="o">=</span> <span class="n">valor</span>
+
+<div class="viewcode-block" id="Pedido.agregar_productos">
+<a class="viewcode-back" href="../../src.html#src.pedido.Pedido.agregar_productos">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">agregar_productos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">producto</span><span class="p">:</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Añade un producto al pedido.</span>
+
+<span class="sd">        Parámetros:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        producto : object</span>
+<span class="sd">            El producto a añadir a la lista del pedido.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">productos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">producto</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Pedido.calcular_total">
+<a class="viewcode-back" href="../../src.html#src.pedido.Pedido.calcular_total">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calcular_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calcula el total del pedido sumando los precios de los productos.</span>
+
+<span class="sd">        Retorna:</span>
+<span class="sd">        --------</span>
+<span class="sd">        float:</span>
+<span class="sd">            El total del pedido.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">producto</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">productos</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">producto</span><span class="o">.</span><span class="n">precio</span>
+        <span class="k">return</span> <span class="n">total</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve una representación en cadena del pedido.</span>
+
+<span class="sd">        Retorna:</span>
+<span class="sd">        --------</span>
+<span class="sd">        str:</span>
+<span class="sd">            Cadena con ID del cliente y fecha del pedido.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot; - ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id_cliente</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> - Fecha: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fecha</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">tienda_virtual</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">src</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Francisco Cortes.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

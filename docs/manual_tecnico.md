@@ -18,52 +18,6 @@ Esta estructura modular favorece la escalabilidad y el mantenimiento del sistema
 
 ---
 
-## 🧱 Diagrama de Clases
-
-```mermaid
-classDiagram
-    class Cliente {
-        -id_cliente: str
-        -nombre_cliente: str
-        -email_cliente: str
-        -direccion_cliente: str
-        +__str__(): str
-    }
-
-    class Producto {
-        -id_producto: str
-        -nombre_producto: str
-        -precio: float
-        -stock: int
-        +actualizar_stock(nuevo_stock: int): str
-        +__str__(): str
-    }
-
-    class ProductoDigital {
-        -formato: str
-        -tamano: float
-        +__str__(): str
-    }
-
-    class Pedido {
-        -id_cliente: str
-        -cliente: Cliente
-        -productos: list
-        -fecha: str
-        +agregar_productos(producto: Producto)
-        +calcular_total(): float
-        +__str__(): str
-    }
-
-    Cliente <.. Pedido
-    Producto <|-- ProductoDigital
-    Pedido --> Producto
-```
-
-Este diagrama representa la relación entre entidades principales del sistema, destacando la herencia de `ProductoDigital` desde `Producto`, y las asociaciones entre `Pedido`, `Cliente` y `Producto`.
-
----
-
 ## 🧾 Explicación del Código
 
 ### `cliente.py`

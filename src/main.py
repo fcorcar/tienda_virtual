@@ -30,4 +30,4 @@ import menu
 
 # Bucle principal del programa. Se ejecuta mientras el sistema esté activo.
 while sistema.en_ejecucion:
-    menu.mostrar_menu(menu.titulo_predeterminado, menu.contenido_predeterminado)
+    menu.mostrar_menu(menu.titulo_predeterminado, menu.contenido_predeterminado) # Muestra inicialmente el menu por defecto
